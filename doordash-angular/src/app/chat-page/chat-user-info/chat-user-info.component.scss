@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.user-name {
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-session-info {
+  font-size: 0.7em;
+  font-weight: lighter;
+}

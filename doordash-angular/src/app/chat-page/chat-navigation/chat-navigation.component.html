@@ -1,0 +1,10 @@
+<app-chat-user-info></app-chat-user-info>
+<nav class="d-flex flex-column">
+  <a *ngFor="let room of chatRooms"
+     [routerLink]="[room.id]"
+     routerLinkActive="active-room"
+     class="nav-item">
+    {{room.name}}
+  </a>
+</nav>
+

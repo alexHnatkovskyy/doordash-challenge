@@ -1,0 +1,4 @@
+<h6 class="user-name">{{userName}}</h6>
+<span class="user-session-info" *ngIf="(userSessionDuration$ | async) as sessionDuration">
+  Online for {{sessionDuration}}
+</span>

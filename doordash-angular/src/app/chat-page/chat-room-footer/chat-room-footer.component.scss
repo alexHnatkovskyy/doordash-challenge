@@ -1,0 +1,14 @@
+:host {
+  height: 80px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn-link {
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
+}

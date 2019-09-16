@@ -1,0 +1,8 @@
+<div class="input-group">
+  <input type="text" name="message" class="form-control shadow-lg bg-white"
+         placeholder="Type a message..."
+         autofocus
+         [(ngModel)]="message"
+         (keyup.enter)="submitMessage()">
+  <button class="btn btn-link" type="button" (click)="submitMessage()" [disabled]="!message">Send</button>
+</div>

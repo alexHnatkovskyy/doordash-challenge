@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-
 
 @Component({
   selector: 'app-root',
@@ -10,11 +8,7 @@ import {HttpClient} from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'doordash-angular';
 
-  constructor(private httpClient: HttpClient) {}
+  constructor() {}
   ngOnInit(): void {
-    this.httpClient.get('/api/rooms')
-      .subscribe((resp) => {
-        console.log('Resp', resp);
-      });
   }
 }
