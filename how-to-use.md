@@ -18,3 +18,6 @@ in this mode all client sources will be build, minified and uglified and copied 
 in this mode all client sources will be compiled with sourcemaps, that can be used for code debugging. Application will be running on `http://localhost:8081` and all requests will be proxied to api that will be running on `http://localhost:8080`
 To run this mode navigate to `doordash-angular` folder from the root of the project and execute `npm run start` command. 
 This mode has a hotswap capbilities on, so all changes in source files will be refelected on application ui on-the-fly.
+
+Initaly user will be redirected to /login page, where username should be provided to enter the chat. Once logged in, user should pick one of the chat rooms on the left of the screen. By default no chat room is selected.  
+I have implemented long polling, to monitor messages update in the room. Any new message added in one instance of the chat will be refelcted in another instance of the chat.
