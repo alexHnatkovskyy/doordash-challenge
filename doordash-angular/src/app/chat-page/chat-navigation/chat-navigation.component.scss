@@ -1,0 +1,39 @@
+@import "../../variables";
+
+:host {
+  color: white;
+  background: $main-red;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 250px;
+}
+
+nav {
+  flex-shrink: 1;
+  flex-grow: 0;
+  overflow: auto;
+  min-height: 0;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: lighter;
+  padding: 10px 20px;
+
+  &:hover {
+    text-decoration: none;
+    background: darken($main-red, 15);
+  }
+}
+
+.active-room {
+  &:hover {
+    text-decoration: none;
+    background: darken($main-red, 30);
+  }
+  background: darken($main-red, 30);
+}

@@ -1,0 +1,4 @@
+<app-chat-room-header *ngIf="chatRoom" [chatRoom]="chatRoom"></app-chat-room-header>
+<app-chat-room-conversation [messages]="messages" [currentUserName]="currentUser.name"
+                            appConversationAutoScroll></app-chat-room-conversation>
+<app-chat-room-footer (messageSubmit)="handleMessageSubmit($event)"></app-chat-room-footer>

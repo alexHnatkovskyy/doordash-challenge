@@ -1,0 +1,38 @@
+@import '../../variables';
+
+:host {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-y: auto;
+  background: $conversation-background-color;
+  padding: 20px;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.message-bubble {
+  align-self: flex-start;
+  color: $chat-text-color;
+  font-size: 0.8rem;
+  max-width: 50%;
+}
+
+.current-user-message {
+  align-self: flex-end;
+
+  .message-text {
+    background: $main-red !important;
+    color: white;
+  }
+}
+
+.message-text {
+  border-radius: 20px;
+  background: white;
+  padding: 1.5rem;
+}

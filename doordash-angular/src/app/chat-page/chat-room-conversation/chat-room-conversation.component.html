@@ -1,0 +1,7 @@
+<div class="conversation">
+  <div class="message-bubble mb-3" *ngFor="let message of messages;trackBy:trackMessagesFn"
+       [ngClass]="{'current-user-message': message.name === currentUserName}">
+    <div class="message-text">{{ message.message }}</div>
+    <div class="message-author" *ngIf="message.name !== currentUserName">{{ message.name }}</div>
+  </div>
+</div>

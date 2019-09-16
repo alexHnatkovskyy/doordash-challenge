@@ -1,0 +1,14 @@
+@import '../../variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: $chat-text-color;
+  scroll-behavior: smooth;
+  transition: all .3s;
+}
+
+app-chat-room-footer {
+  box-shadow: 0 -0.125rem .25rem rgba(0,0,0,.075)!important;
+}

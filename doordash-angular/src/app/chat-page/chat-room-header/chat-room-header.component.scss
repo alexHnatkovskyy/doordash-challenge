@@ -1,0 +1,29 @@
+@import '../../_variables.scss';
+
+:host {
+  display: block;
+  z-index: 1;
+}
+
+header {
+  height: 100px;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > h5 {
+    font-weight: lighter;
+  }
+}
+
+.participant {
+  font-size: 0.85rem;
+  font-weight: lighter;
+}
+
+.highlighted-user {
+  color: $main-red;
+}

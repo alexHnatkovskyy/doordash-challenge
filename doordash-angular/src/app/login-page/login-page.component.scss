@@ -1,0 +1,93 @@
+@import "../variables";
+
+:host {
+  display: block;
+  height: 100%;
+  min-height: 100%;
+}
+
+.login-page {
+  height: 100%;
+}
+
+form[name="loginForm"] {
+  display: block;
+  width: 30%;
+}
+
+button {
+  background: $main-red;
+  color: white;
+  width: 100%;
+
+  &:hover {
+    color: white;
+    background: rgba($main-red, .9);
+  }
+}
+
+.form-control, .btn {
+  border-radius: .10rem;
+}
+
+@media screen and (min-width: 2000px) {
+  form[name="loginForm"] {
+    width: 26%;
+  }
+  .form-control, .btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:2000px) {
+  .form-control, .btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width:1400px) {
+  .form-control, .btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .form-control, .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  form[name="loginForm"] {
+    width: 40%;
+  }
+
+  .form-control, .btn {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .form-control, .btn {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  form[name="loginForm"] {
+    width: 45%;
+  }
+  .form-control, .btn {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (max-width:300px) {
+  form[name="loginForm"] {
+    width: 80%;
+  }
+  .form-control, .btn {
+    margin-bottom: 0!important;
+    font-size: 0.3rem;
+  }
+}

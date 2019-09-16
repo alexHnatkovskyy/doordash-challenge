@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve ./public",
+    "start": "cd ./doordash-angular && npm run build:release && cd ../ && serve ./public & npm run api-server",
     "api-server": "node server.js"
   },
   "engines": {

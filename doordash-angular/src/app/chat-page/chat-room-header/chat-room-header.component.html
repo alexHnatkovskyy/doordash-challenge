@@ -1,0 +1,10 @@
+<header class="shadow-sm" *ngIf="chatRoom">
+  <h5 class="room-name">{{chatRoom.name}}</h5>
+  <div class="participants">
+    <span *ngFor="let user of participants;trackBy:trackUsersBy;last as lastUser"
+          [ngClass]="{'highlighted-user': user === currentUser.name}"
+          class="participant">
+      {{user + (!lastUser ? ', ' : '')}}
+    </span>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center login-page">
+  <form name="loginForm">
+    <div class="form-group">
+      <input type="text" name="user" [(ngModel)]="user" (keyup.enter)="login()"
+             autofocus
+             class="form-control shadow-sm mb-3 bg-white"
+             placeholder="Type your username...">
+      <button [disabled]="!user" type="button" class="btn shadow-sm" (click)="login()">Join the DoorDash Chat!</button>
+    </div>
+  </form>
+</div>
