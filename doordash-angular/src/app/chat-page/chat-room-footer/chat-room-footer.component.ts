@@ -1,15 +1,19 @@
-import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Renderer2,  AfterViewInit, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-chat-room-footer',
   templateUrl: './chat-room-footer.component.html',
   styleUrls: ['./chat-room-footer.component.scss']
 })
-export class ChatRoomFooterComponent {
+export class ChatRoomFooterComponent implements AfterViewChecked {
   message: string;
 
   @Output() messageSubmit = new EventEmitter<string>();
-  constructor() {
+  constructor(private renderer: Renderer2) {
+  }
+
+  ngAfterViewChecked(): void {
+    this.renderer.selectRootElement('input[name="message"]', true).focus();
   }
 
   submitMessage() {

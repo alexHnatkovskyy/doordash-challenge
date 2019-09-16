@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, timer } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { IChatRoom, IChatMessage, ChatRoom } from '../models/chat-room';
+import { environment } from '../../environments/environment';
 
-const ROOMS_API = '/api/rooms';
+const ROOMS_API = `${environment.apiUrl}/api/rooms`;
 const POLLING_INTERVAL = 1000;
 
 @Injectable({
@@ -35,15 +36,15 @@ export class ChatService {
     return this.httpClient.get<IChatMessage[]>(`${ROOMS_API}/${roomId}/messages`);
   }
 
-  pollChatRoomMessages(roomId: number) {
+  pollChatRoomMessages( roomId: number ) {
     return timer(0, POLLING_INTERVAL)
       .pipe(
         switchMap(_ => this.getChatRoomMessages(roomId))
       );
   }
 
-  postMessageInChatRoom(roomId: number, message: string, user: string) {
-    return this.httpClient.post(`${ROOMS_API}/${roomId}/messages`, {name: user, message})
+  postMessageInChatRoom( roomId: number, message: string, user: string ) {
+    return this.httpClient.post(`${ROOMS_API}/${roomId}/messages`, { name: user, message })
       .pipe(
         catchError(() => of([]))
       );
